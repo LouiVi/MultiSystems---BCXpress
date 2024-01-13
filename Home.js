@@ -60,6 +60,8 @@ this.DecodeFromCamera = function()
   {
     scanCapture.SetText( result.barcodeType + ": " + result.content );
     app.HideProgress();
+    var bl = utils.Confirm("Did you like to save the image of the scanned code?");
+    if(bl) cam.TakePicture(app.GetAppPath()+"/Img/"+ utils.Prompt("Enter the file name:","")+".png" );
   }
 
   setTimeout( self.DecodeFromCamera, 200 );

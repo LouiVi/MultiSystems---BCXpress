@@ -209,7 +209,7 @@ function CreateDrawer()
 	layDrawer.AddChild( layDrawerTop );
 	
 	//Add an icon to top layout.
-	var img = app.CreateImage( "Img/Hello.png", 0.15 );
+	var img = app.CreateImage( "Img/scan.png", 0.15 );
 	img.SetMargins( 0.02,0.02,0.02,0.01 );
 	layDrawerTop.AddChild( img );
 	
