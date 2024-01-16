@@ -17,7 +17,7 @@ var curPage = null;
 //Called when application is started.
 function OnStart()
 {    
-alert(app.ListFolder("/data/user/0/com.smartphoneremote.androidscriptfree/","*.*",1000)); 
+//alert(app.ListFolder("/data/user/0/com.smartphoneremote.androidscriptfree/","*.*",1000)); 
 
 //Create and start location sensor.
 	//(Achievable update rate is hardware specific)

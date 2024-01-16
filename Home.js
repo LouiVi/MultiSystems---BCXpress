@@ -76,6 +76,7 @@ this.DecodeFromCamera = function()
 
   if( result != null )
   {
+  app.OpenUrl( "https://barcodelookup.com/" + result.content );
     scanCapture.SetText( result.barcodeType + ": " + result.content );
     app.HideProgress();
     var db = app.OpenDatabase( "BCXpress.sqlite");///*app.GetInternalFolder() + */"/storage/emulated/0/northwindEF.db");// + "BCXpress.sqlite" )  
@@ -85,9 +86,9 @@ this.DecodeFromCamera = function()
     var picName = app.GetAppPath()+"/Img/"+ utils.Prompt("Enter the file name:","")+".png";
     if(bl) cam.TakePicture(picName );
     //picName = picName.replace("/sdcard/","/data/user/0/com.smartphoneremote.androidscriptfree/");
-    alert(picName);
+   // alert(picName);
     var im = app.CreateImage( picName,1,-1,"Resize");
-    lay.AddChild( im );
+    //lay.AddChild( im );
     //alert(im.data); 
     //var t = self.ImageToCanvas(im);
     //app.Wait( 2 );
